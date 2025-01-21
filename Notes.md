@@ -1,0 +1,34 @@
+- Custom elements
+- Shadow Dom API
+  - Add hidden separated DOM to an element
+  - CSS utility classes may not work as previously
+- Template
+  - Holds HTML that is not to be rendered immediately
+- Don't use ids for css because there may be overlap
+- Need to be extra safe with web components and ensure they work properly set, unset, and unproperly set
+  - Avoid using default values and instead have the default be the unset value in css
+- Used lit element to auto-generate a good chunk of boilerplate property generation like getters, setters, type checking, etc.
+  - Reactive so updates ui when value is changed in code-behind or attribute change events
+  - Leverages shadow dom
+- Used jsdoc + storybooks to generate component documentation
+  - Similar to xmldoc comments + swagger
+  - Storybooks are markdown
+- Validation more difficult in angular
+  - Must provide hooks for component which angular has been against
+  - Can use a web component language server to address
+- The browser does most of the heavy lifting
+- You can slot in pretty much anything into slots on components
+  - E.g. content, templates, components, etc.
+- You can toggle the name of slots
+- Look into declarative shadow dom for server side rendering
+  - This is more band-aidy
+- Declarative custom elements
+  - Declare custom elements with html instead of javascript
+  - Not interactive
+  - Not really prime-time yet
+- Most accessibility tools traverse the shadow dom well
+  - Can be kind of tricky sometimes when an outside element needs to reference internal element
+  - Element internals allows us to surface those elements
+  - New cross-route aria is coming
+    - Pass aria attributes into web component
+- Code-bubble is available in npm
